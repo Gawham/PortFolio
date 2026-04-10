@@ -1,0 +1,77 @@
+{
+  "videos": [
+    {
+      "title": "Insdr EdTech",
+      "shareableLink": "https://youtu.be/5WLakloAQiI",
+      "visibility": "Public",
+      "category": "vibecoded search algo"
+    },
+    {
+      "title": "Gotham Demo",
+      "shareableLink": "https://youtu.be/8uiMYOoMXCU",
+      "visibility": "Public",
+      "category": "vibecoded web3 software"
+    },
+    {
+      "title": "Roger PNC",
+      "shareableLink": "https://youtu.be/sTFxYTIJk-c",
+      "visibility": "Unlisted",
+      "category": "vibecoded real estate for usa software"
+    },
+    {
+      "title": "Roger - PNC Probate",
+      "shareableLink": "https://youtu.be/sEKLuUq-d88",
+      "visibility": "Unlisted",
+      "category": "vibecoded real estate for usa software"
+    },
+    {
+      "title": "Automation Demo",
+      "shareableLink": "https://youtu.be/hoPntyFMoBY",
+      "visibility": "Public",
+      "category": "phone number identification features"
+    },
+    {
+      "title": "Auto Mode Feature Demo",
+      "shareableLink": "https://youtu.be/UhfYtr1CZBE",
+      "visibility": "Public",
+      "category": "phone number identification features"
+    },
+    {
+      "title": "Emails",
+      "shareableLink": "https://youtu.be/tjNERWMtIDM",
+      "visibility": "Unlisted",
+      "category": "vibecoded crm"
+    },
+    {
+      "title": "Insdr Demo v2",
+      "shareableLink": "https://youtu.be/vo5CGqggTjg",
+      "visibility": "Public",
+      "category": "vibecoded crm"
+    },
+    {
+      "title": "Email Automation Demo l Insdr",
+      "shareableLink": "https://youtu.be/Ioo98DPWEj4",
+      "visibility": "Public",
+      "category": "vibecoded crm"
+    },
+    {
+      "title": "WTF Fund - Glance Update",
+      "shareableLink": "https://youtu.be/Y5hfQq8S5hs",
+      "visibility": "Public",
+      "category": "vibecoded fintech"
+    },
+    {
+      "title": "Glance AI l Gemini API Developer Competition",
+      "shareableLink": "https://youtu.be/U7ZN6soNxLU",
+      "visibility": "Public",
+      "category": "vibecoded fintech"
+    },
+    {
+      "title": "Glance Ai Demo",
+      "shareableLink": "https://youtu.be/lEm8-3J4H_4",
+      "visibility": "Public",
+      "category": "vibecoded fintech"
+    }
+  ],
+  "totalVideos": 12
+}
