@@ -2,42 +2,50 @@
   {
     "name": "LLmWiki",
     "goal": "A Next.js 15+ application acting as the frontend for your personal AI knowledge base. It uses the app router and is configured with specific AI agent rules (AGENTS.md) to manage structured content generation and display.",
-    "last_updated": "2026-04-10T11:50:00Z"
+    "last_updated": "2026-04-10T11:50:00Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "LLm-Wiki-",
     "goal": "Public-facing documentation or a mirror of the LLmWiki project, likely intended to showcase the UI or provide user-facing guides for the wiki system.",
-    "last_updated": "2026-04-10T08:40:59Z"
+    "last_updated": "2026-04-10T08:40:59Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "InsdrLiteRag",
     "goal": "A streamlined implementation of LightRAG (Simple and Fast Retrieval-Augmented Generation). It integrates Graph-based RAG with support for various backends like Neo4j, MongoDB, and PostgreSQL to provide context-aware LLM responses.",
-    "last_updated": "2026-04-09T18:08:31Z"
+    "last_updated": "2026-04-09T18:08:31Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "InsdrParse",
     "goal": "A multimodal ingestion pipeline for the 'Insdr' ecosystem. It handles OCR for PDFs, transcribes audio files (CAT preparation lectures), and splits large documents into chunks for RAG processing.",
-    "last_updated": "2026-04-09T06:53:59Z"
+    "last_updated": "2026-04-09T06:53:59Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "PythonBackend",
     "goal": "The core production API for 'Insdr', deployed on Google App Engine. It features a hybrid RAG service (rag_service.py), a document registry for managing user uploads in PostgreSQL, and integration with Google Cloud Storage and reranking models.",
-    "last_updated": "2026-04-06T06:01:37Z"
+    "last_updated": "2026-04-06T06:01:37Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "insdrdata",
     "goal": "A monorepo (Turborepo + pnpm) based on the 'Creatorem' SaaS stack. It is the centralized data management layer for the 'Insdr' project, featuring automated deployment scripts, internal tools for parsing tests, and Supabase integration for database management.",
-    "last_updated": "2026-03-31T19:55:05Z"
+    "last_updated": "2026-03-31T19:55:05Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "literag",
     "goal": "The internal development sandbox for the LightRAG framework. It contains the raw source code for testing core RAG features (Neo4j/MongoDB backends, reranking logic, and batch insertion) before they are finalized in the public InsdrLiteRag repository.",
-    "last_updated": "2026-03-26T18:08:40Z"
+    "last_updated": "2026-03-26T18:08:40Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "UPSC-Data",
-    "goal": "A data processing pipeline for UPSC Prelims questions. It parses markdown files, uses Google Gemini (2.5-flash) to tag questions by subject/difficulty, embeds them using Azure OpenAI, and stores structured results in PostgreSQL.",
-    "last_updated": "2026-03-18T17:50:33Z"
+    "goal": "A search and analysis engine for UPSC Prelims questions. It parses markdown files, uses Google Gemini (2.5-flash) to tag questions by subject/difficulty, embeds them using Azure OpenAI, and stores structured results in PostgreSQL for semantic search.",
+    "last_updated": "2026-03-18T17:50:33Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "template",
@@ -46,8 +54,9 @@
   },
   {
     "name": "CrackMat",
-    "goal": "A Next.js web application specifically designed for GMAT preparation (gmatjs). It integrates Google Gemini for AI-assisted learning and uses 'cheerio' and 'marked' for rendering educational content.",
-    "last_updated": "2026-02-20T14:45:23Z"
+    "goal": "An AI-powered search engine and learning platform for GMAT preparation (gmatjs). It integrates Google Gemini for AI-assisted learning and uses 'cheerio' and 'marked' for indexing and rendering educational content.",
+    "last_updated": "2026-02-20T14:45:23Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "Aakash",
@@ -62,12 +71,14 @@
   {
     "name": "gotham",
     "goal": "The frontend monorepo for the 'Gotham Platform', an AI-powered blockchain escrow system. It facilitates negotiation between clients and developers, using a blockchain-verified factory pattern for project contracts and AI-driven code auditing.",
-    "last_updated": "2026-02-15T18:31:07Z"
+    "last_updated": "2026-02-15T18:31:07Z",
+    "project_category": "vibecoded web3 software"
   },
   {
     "name": "gotham-backend",
     "goal": "The backend for Gotham, built with Hardhat and Node.js. It implements Ethereum smart contracts for project escrows, integrates Gemini AI for automated document analysis and code auditing (via 3x independent consensus calls), and handles file uploads to GCP.",
-    "last_updated": "2026-02-14T16:51:06Z"
+    "last_updated": "2026-02-14T16:51:06Z",
+    "project_category": "vibecoded web3 software"
   },
   {
     "name": "thekit",
@@ -107,17 +118,20 @@
   {
     "name": "brainbackend",
     "goal": "A high-performance backend (Node.js/Express) for the 'Brain' project. It handles quick-connect sessions, audio transcriptions, and is fully containerized with deployment scripts for Google Cloud Platform. It uses Prisma for PostgreSQL database interactions.",
-    "last_updated": "2026-01-02T09:00:35Z"
+    "last_updated": "2026-01-02T09:00:35Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "brain",
     "goal": "The frontend application corresponding to brainbackend. It's a Next.js 15+ app that implements 'NexusWalk' features, integrated with PostHog analytics and designed for complex querying and data visualization.",
-    "last_updated": "2026-01-01T15:09:07Z"
+    "last_updated": "2026-01-01T15:09:07Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "NexusQuerying",
     "goal": "A dedicated backend for the 'Nexus' engine, focusing on hybrid querying. It supports ingestion and retrieval from Neo4j (Graph) and PostgreSQL (Relational), using Azure OpenAI for embeddings. It includes a multi-user demo for testing isolated knowledge bases.",
-    "last_updated": "2025-12-31T15:28:46Z"
+    "last_updated": "2025-12-31T15:28:46Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "news",
@@ -166,8 +180,9 @@
   },
   {
     "name": "GuhanGPT",
-    "goal": "A specialized AI chatbot interface. It features voice integration (Voice.md), an integration plan for expanded capabilities, and uses Prisma for persistent storage. It acts as a personal or platform-specific GPT implementation.",
-    "last_updated": "2025-10-09T15:04:29Z"
+    "goal": "A specialized AI chatbot interface and search assistant. It features voice integration (Voice.md), an integration plan for expanded capabilities, and uses Prisma for persistent storage. It acts as a personal or platform-specific GPT implementation.",
+    "last_updated": "2025-10-09T15:04:29Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "InsdrFoam",
@@ -177,352 +192,422 @@
   {
     "name": "GuhanChat",
     "goal": "A personal chat application built with Next.js 15+ and Tailwind CSS. It follows your standard app router structure and acts as a playground for custom UI components and chat interactions.",
-    "last_updated": "2025-10-06T07:19:05Z"
+    "last_updated": "2025-10-06T07:19:05Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "Odin-KnowledgeGraph",
     "goal": "The core knowledge engine for the Odin suite. It manages complex datasets including financial and foreclosure data (Assessor_cases.json), uses Python for building embeddings, and features dedicated query scripts for financial and legal analysis.",
-    "last_updated": "2025-10-04T16:46:49Z"
+    "last_updated": "2025-10-04T16:46:49Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "Odin-Graphing",
     "goal": "The visualization and graph-building layer for Odin. It features a Python-based graph builder (GPT5Nano.py) and a Next.js dashboard to visualize complex relationships between data entities (like OCR outputs from large documents).",
-    "last_updated": "2025-10-01T17:54:25Z"
+    "last_updated": "2025-10-01T17:54:25Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "Odin---Agent-JS",
     "goal": "A JavaScript/Node.js implementation of the Odin AI agent. It pushes data to 'Graphiti' (a graph database layer), generates person-specific subgraphs, and provides direct Neo4j querying capabilities for real-time agent responses.",
-    "last_updated": "2025-10-01T17:37:07Z"
+    "last_updated": "2025-10-01T17:37:07Z",
+    "project_category": "vibecoded search algo"
   },
   {
     "name": "realestateinsdr",
     "goal": "A specialized real estate dashboard within the 'Insdr' ecosystem. Built with Next.js and Prisma, it features custom 'calling dashboard' instructions and is designed to manage real estate leads and outreach directly from the UI.",
-    "last_updated": "2025-09-16T11:03:15Z"
+    "last_updated": "2025-09-16T11:03:15Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "OutReacher",
     "goal": "A high-scale lead generation and email outreach platform. Built with Next.js, it includes a sophisticated lead dashboard, automated campaign tracking, and integration with search/scraping modules for target discovery.",
-    "last_updated": "2025-09-10T06:56:29Z"
+    "last_updated": "2025-09-10T06:56:29Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "OpenTesting",
     "goal": "A dedicated testing environment for evaluating various LLMs (OpenAI, Gemini, etc.) and RAG implementations. It serves as a quality assurance layer for the 'Open' and 'Insdr' project lines.",
-    "last_updated": "2025-09-02T12:14:11Z"
+    "last_updated": "2025-09-02T12:14:11Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "incoming",
     "goal": "A centralized ingestion service for handling incoming data streams (leads, documents, or webhooks). Built with Next.js and Prisma, it likely acts as the entry point for raw data into your backend ecosystem.",
-    "last_updated": "2025-08-27T09:54:24Z"
+    "last_updated": "2025-08-27T09:54:24Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "AMD",
     "goal": "A specialized data processing or analytics project (potentially standing for 'Analysis & Metadata'). Built with Next.js and Tailwind, it focuses on structured data visualization.",
-    "last_updated": "2025-08-26T12:19:00Z"
+    "last_updated": "2025-08-26T12:19:00Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Harish",
     "goal": "A customized lead processing system. It features Python scripts for processing lead data from Excel/JSON, debugging complex data structures, and includes a Next.js frontend for lead management tasks.",
-    "last_updated": "2025-08-25T12:13:53Z"
+    "last_updated": "2025-08-25T12:13:53Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Status",
     "goal": "A monitoring dashboard for your various services. Built with Next.js and Prisma, it tracks the 'status' or health of different projects and background tasks across your ecosystem.",
-    "last_updated": "2025-08-25T09:10:18Z"
+    "last_updated": "2025-08-25T09:10:18Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "OpenAiCaller",
     "goal": "A core utility for real-time AI interactions. It includes a WebSocket server for low-latency communication and a webapp for testing OpenAI-driven voice or text streams.",
-    "last_updated": "2025-08-24T13:02:09Z"
+    "last_updated": "2025-08-24T13:02:09Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "langraphwebagent",
     "goal": "An advanced web research agent built using LangGraph and Turborepo. It orchestrates complex multi-step research tasks, leveraging graph-based logic to navigate and summarize web content autonomously.",
-    "last_updated": "2025-08-21T08:33:08Z"
+    "last_updated": "2025-08-21T08:33:08Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Drive",
     "goal": "A data management system for real estate leads (specifically Cuyahoga County). It parses large CSV/JSON file trees, classifies lead types/subtypes using automated guidelines, and pushes structured data to a central registry.",
-    "last_updated": "2025-08-19T13:55:12Z"
+    "last_updated": "2025-08-19T13:55:12Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "System-PNC",
     "goal": "An automated probate and legal notice processing system. It scrapes legal source HTML, uses LLMs to parse and filter probate notices (Step1.py, ProbatePrase.py), and generates filtered CSVs for targeted real estate or legal leads.",
-    "last_updated": "2025-08-18T09:54:03Z"
+    "last_updated": "2025-08-18T09:54:03Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "InsdrWebAgent",
     "goal": "A specialized web browsing agent built for the 'Insdr' platform. It uses Playwright/Puppeteer to navigate websites, extract content, and perform automated research or data collection tasks.",
-    "last_updated": "2025-08-06T14:32:30Z"
+    "last_updated": "2025-08-06T14:32:30Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "express-skiptracer",
     "goal": "An Express.js backend for a 'Skip Tracing' service. It likely provides endpoints for the 'node-skiptracer' logic, allowing users to look up person/property data via an API.",
-    "last_updated": "2025-08-06T10:32:50Z"
+    "last_updated": "2025-08-06T10:32:50Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "InsdrLangAgent",
     "goal": "A language-focused agent implementation (using LangChain or similar). It focuses on processing natural language queries and routing them to various 'Insdr' tools or RAG engines.",
-    "last_updated": "2025-08-02T13:51:09Z"
+    "last_updated": "2025-08-02T13:51:09Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "insdrFinance",
     "goal": "The financial tracking and accounting module for 'Insdr'. It handles transaction logs, billing logic, and financial reporting for the platform's users.",
-    "last_updated": "2025-07-30T11:20:52Z"
+    "last_updated": "2025-07-30T11:20:52Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Estateagent",
     "goal": "A dedicated real estate agent simulation or tool. Built with Next.js and Prisma, it features a specialized 'zprofile' API for retrieving and managing property profiles.",
-    "last_updated": "2025-07-29T13:05:41Z"
+    "last_updated": "2025-07-29T13:05:41Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "node-skiptracer",
     "goal": "A Node.js based scraper/utility for skip tracing. It includes Python helper scripts (js.py, f1.py) and templates for parsing voter and property owner data from HTML source files.",
-    "last_updated": "2025-07-27T10:01:04Z"
+    "last_updated": "2025-07-27T10:01:04Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "glancemurica",
     "goal": "A Next.js application, likely a localized version of the 'Glance' suite for the US market. It features standard UI components and is configured for deployment on Vercel.",
-    "last_updated": "2025-07-27T09:20:58Z"
+    "last_updated": "2025-07-27T09:20:58Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "SkipPhone",
     "goal": "A data scrubbing tool for skip tracing. It processes 'Probate Scrubbed' and 'Renav Final' CSV files, likely cross-referencing phone numbers and Zillow data for real estate leads.",
-    "last_updated": "2025-07-24T15:55:01Z"
+    "last_updated": "2025-07-24T15:55:01Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Search",
     "goal": "An automated search and indexing service. It features a multi-stage Python pipeline (Stage1.py) for querying data, processing results, and upserting structured information into an AWS S3 bucket.",
-    "last_updated": "2025-07-12T06:13:22Z"
+    "last_updated": "2025-07-12T06:13:22Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "ReColarado",
     "goal": "A real estate data enrichment tool specifically for the Colorado market. It scrapes property details (HouseDeets.py) and enriches probate lead lists with granular house information.",
-    "last_updated": "2025-07-10T09:38:29Z"
+    "last_updated": "2025-07-10T09:38:29Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "organisation",
     "goal": "A monorepo (Turborepo + pnpm) designed for organizational management. It features a Next.js application, a CLI for administrative tasks, and integration with Supabase for data persistence.",
-    "last_updated": "2025-07-08T13:31:25Z"
+    "last_updated": "2025-07-08T13:31:25Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "prime-insight-compass-52",
     "goal": "A Next.js application, likely a project under the 'Prime Insight' series. It features standard UI patterns and is configured for modern frontend workflows.",
-    "last_updated": "2025-07-03T06:06:30Z"
+    "last_updated": "2025-07-03T06:06:30Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "ceofinder",
     "goal": "A specialized lead generation tool for finding executive contacts. Built with Next.js, it likely integrates with your other scraping and data enrichment modules.",
-    "last_updated": "2025-06-27T08:25:51Z"
+    "last_updated": "2025-06-27T08:25:51Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Numbers",
     "goal": "A data utility for processing phone numbers or numeric datasets. Built with Next.js and Prisma, it handles persistent data storage for outreach lists.",
-    "last_updated": "2025-06-18T04:25:02Z"
+    "last_updated": "2025-06-18T04:25:02Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "node-emailer",
     "goal": "A Node.js backend for managing email campaigns. It provides an API for sending automated outreach emails, likely integrated into your larger lead generation ecosystem.",
-    "last_updated": "2025-06-16T12:40:31Z"
+    "last_updated": "2025-06-16T12:40:31Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "tav",
     "goal": "An advanced research and data cleaning tool. It uses the Tavily API and Bing search for data gathering, includes scripts for cleaning datasets, and converts raw LinkedIn profile data into structured CSVs.",
-    "last_updated": "2025-06-15T07:35:26Z"
+    "last_updated": "2025-06-15T07:35:26Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "boilerplate",
     "goal": "Your standard boilerplate for Next.js applications. It includes pre-configured settings for Tailwind, ESLint, and a generic 'App' structure for rapid project initialization.",
-    "last_updated": "2025-06-13T18:41:14Z"
+    "last_updated": "2025-06-13T18:41:14Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "link",
     "goal": "A URL extraction and profile management tool. It uses Python to extract URLs, manages session cookies for authenticated scraping, and integrates with Prisma for storing scraped LinkedIn/Zillow data.",
-    "last_updated": "2025-06-13T11:46:11Z"
+    "last_updated": "2025-06-13T11:46:11Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "tracker",
     "goal": "A persistent data tracking service. Built with Next.js and Prisma, it manages 'places' and 'profiles' data, likely tracking real estate listings or contact statuses over time.",
-    "last_updated": "2025-06-11T11:19:05Z"
+    "last_updated": "2025-06-11T11:19:05Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "picker",
     "goal": "A specialized selection or filtering tool within your ecosystem. Built with Next.js 15+, it provides a UI for picking or categorizing specific data points from larger datasets.",
-    "last_updated": "2025-06-10T12:17:49Z"
+    "last_updated": "2025-06-10T12:17:49Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "legacy1",
     "goal": "A legacy data processing repository. It includes various scripts for cleaning and merging CSV files, primarily focused on real estate owner data and LinkedIn profile extraction.",
-    "last_updated": "2025-06-10T09:15:54Z"
+    "last_updated": "2025-06-10T09:15:54Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Din",
     "goal": "A Node.js application, likely an early iteration of your data ingestion or dashboard tools. It features standard backend configurations and was used for prototyping data flows.",
-    "last_updated": "2025-06-09T08:09:43Z"
+    "last_updated": "2025-06-09T08:09:43Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "PNCInt",
     "goal": "The internal interface for the PNC (Probate and Notice) system. It provides the UI logic for managing and interacting with legal notice data parsed from various court sources.",
-    "last_updated": "2025-06-07T13:42:19Z"
+    "last_updated": "2025-06-07T13:42:19Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "PNC2",
     "goal": "A public, modern implementation of the PNC system. Built with Next.js 15+ and Tailwind, it serves as the public-facing platform for legal notice analytics and probate lead discovery.",
-    "last_updated": "2025-06-07T08:56:56Z"
+    "last_updated": "2025-06-07T08:56:56Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "PNCInterface",
     "goal": "A legacy or alternative version of the PNC interface. It features standard web components for data entry and notice filtering.",
-    "last_updated": "2025-06-06T12:16:46Z"
+    "last_updated": "2025-06-06T12:16:46Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "langgraph",
     "goal": "A foundational research repository for LangGraph. It contains experiments with stateful, multi-actor AI agents and graph-based workflow orchestration.",
-    "last_updated": "2025-06-05T06:01:13Z"
+    "last_updated": "2025-06-05T06:01:13Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "APIs",
     "goal": "A centralized collection of API implementations. It acts as a gateway or library for interacting with external services (Twilio, OpenAI, various scrapers) used across your projects.",
-    "last_updated": "2025-06-05T04:55:01Z"
+    "last_updated": "2025-06-05T04:55:01Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "email",
     "goal": "A Python-based email automation tool. It features 'zoomer.py' for dynamic content generation and 'website.py' for managing email-driven web interactions or landing page alerts.",
-    "last_updated": "2025-05-21T16:01:33Z"
+    "last_updated": "2025-05-21T16:01:33Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "runner",
     "goal": "A specialized execution engine for automated tasks. It uses Prisma for data persistence and includes scripts for extracting URLs and managing session cookies for large-scale web automation.",
-    "last_updated": "2025-05-20T14:56:30Z"
+    "last_updated": "2025-05-20T14:56:30Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "relist",
     "goal": "An extensive real estate data processing engine. It handles thousands of records from various Colorado counties (Adams, Boulder, Jefferson, Larimer, Weld), cleaning deed data, merging owner names, and processing property loan JSONs.",
-    "last_updated": "2025-05-19T07:17:15Z"
+    "last_updated": "2025-05-19T07:17:15Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "mail",
     "goal": "A legacy email processing project. It features standard email interaction scripts and was likely an early precursor to your more advanced automated outreach tools.",
-    "last_updated": "2025-05-17T06:25:40Z"
+    "last_updated": "2025-05-17T06:25:40Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "ohio",
     "goal": "A targeted real estate project for the Ohio market. It focuses on lead generation and property data collection specifically within Ohio counties.",
-    "last_updated": "2025-05-15T10:28:38Z"
+    "last_updated": "2025-05-15T10:28:38Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "EmailApi",
     "goal": "A specialized API service for email validation and delivery. It likely served as a standalone microservice to support the various lead generation platforms in your ecosystem.",
-    "last_updated": "2025-05-10T11:06:12Z"
+    "last_updated": "2025-05-10T11:06:12Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "SEO",
     "goal": "A search engine optimization toolkit. It includes scripts for keyword analysis, ranking tracking, and site auditing to improve the visibility of your web projects.",
-    "last_updated": "2025-05-10T09:42:54Z"
+    "last_updated": "2025-05-10T09:42:54Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "testrun",
     "goal": "A temporary or scratchpad repository for testing new deployment strategies, API integrations, or small logic snippets before moving them into main projects.",
-    "last_updated": "2025-05-08T12:45:41Z"
+    "last_updated": "2025-05-08T12:45:41Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "pitchbook",
     "goal": "A specialized tool for analyzing venture capital and private equity data, likely mirroring or integrating with PitchBook-style datasets for investor outreach.",
-    "last_updated": "2025-05-07T08:57:16Z"
+    "last_updated": "2025-05-07T08:57:16Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "yashil",
     "goal": "A personal or client-specific web project. Built with your standard Next.js stack, it serves as a tailored application or landing page.",
-    "last_updated": "2025-05-06T13:44:09Z"
+    "last_updated": "2025-05-06T13:44:09Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "SalesNav",
     "goal": "A LinkedIn Sales Navigator automation tool. It includes scripts for scraping leads, managing saved searches, and exporting prospect data for CRM integration.",
-    "last_updated": "2025-04-27T16:31:28Z"
+    "last_updated": "2025-04-27T16:31:28Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "estate",
     "goal": "A foundational real estate data repository. It likely served as the initial platform for testing the property search and owner identification logic used in later projects.",
-    "last_updated": "2025-04-27T15:50:24Z"
+    "last_updated": "2025-04-27T15:50:24Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "PNC",
     "goal": "The primary development core for the Probate and Notice system. It handles complex CAPTCHA solving, manages Oxylabs/proxy rotations, and features a full Python pipeline for scraping and merging thousands of legal notice records.",
-    "last_updated": "2025-04-27T12:22:46Z"
+    "last_updated": "2025-04-27T12:22:46Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Renav",
     "goal": "A specialized data extraction and merging project. It focuses on 'Renav' property data, featuring Python scripts (Renav.py) for cleaning and consolidating real estate lead lists.",
-    "last_updated": "2025-04-25T10:38:32Z"
+    "last_updated": "2025-04-25T10:38:32Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "fin",
     "goal": "A foundational financial tracking repository. Built with Next.js and Prisma, it likely served as the initial architecture for your larger financial management tools.",
-    "last_updated": "2025-04-21T11:04:51Z"
+    "last_updated": "2025-04-21T11:04:51Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Legacy-X-Foreclosure-",
     "goal": "A legacy repository focused on foreclosure data extraction. It contains early versions of the scraping logic used to identify distressed property leads.",
-    "last_updated": "2025-04-19T14:13:59Z"
+    "last_updated": "2025-04-19T14:13:59Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Jon",
     "goal": "A standard Next.js application, potentially a client-specific project or personal site implementation using your usual modern web stack.",
-    "last_updated": "2025-04-18T12:50:24Z"
+    "last_updated": "2025-04-18T12:50:24Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "RealEstate",
     "goal": "A collection of scripts and assets for real estate market analysis. It likely served as a general-purpose repository for property data experimentation.",
-    "last_updated": "2025-04-18T06:58:10Z"
+    "last_updated": "2025-04-18T06:58:10Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "APIs2",
     "goal": "An expanded or secondary collection of API integrations. It includes updated logic for external services and served as a bridge during the migration between API versions.",
-    "last_updated": "2025-04-17T09:06:20Z"
+    "last_updated": "2025-04-17T09:06:20Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "DataScrape",
     "goal": "A dedicated scraping repository. It features various Python-based crawlers for extracting data from multiple web sources for lead generation.",
-    "last_updated": "2025-04-15T08:06:05Z"
+    "last_updated": "2025-04-15T08:06:05Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "insdrEstate",
     "goal": "The specific real estate branch of the 'Insdr' platform. It combines lead management UI with property data retrieval logic.",
-    "last_updated": "2025-04-15T05:51:40Z"
+    "last_updated": "2025-04-15T05:51:40Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "abhi2",
     "goal": "A lead processing utility. It uses Python (Indi.py) to manage individual profile datasets and Alan.csv contact lists, likely for specialized outreach campaigns.",
-    "last_updated": "2025-04-14T09:11:07Z"
+    "last_updated": "2025-04-14T09:11:07Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "JsonToCSV",
     "goal": "A heavy-duty data conversion and enrichment tool. It scrapes company data from LinkedIn and Crunchbase (using cookies and specialized crawlers like CompanyDeapth.py), and converts raw JSON profile data into high-quality CSV lead lists.",
-    "last_updated": "2025-03-27T08:34:36Z"
+    "last_updated": "2025-03-27T08:34:36Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Abhilasha",
     "goal": "A personal or client-specific project, likely related to the 'abhi' series of lead generation and data processing tools.",
-    "last_updated": "2025-03-27T08:29:04Z"
+    "last_updated": "2025-03-27T08:29:04Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Legacy",
     "goal": "A repository containing legacy code and experimental features for the 'Insdr' and 'Open' suites, serving as a long-term archive.",
-    "last_updated": "2025-03-25T13:16:55Z"
+    "last_updated": "2025-03-25T13:16:55Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Phone",
     "goal": "A minimal boilerplate for a TypeScript + Express backend. It provides a clean starting point for your telephony or SMS integration projects.",
-    "last_updated": "2025-03-24T16:12:50Z"
+    "last_updated": "2025-03-24T16:12:50Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "Landing",
     "goal": "A high-performance landing page template for IT solutions and services. Built with Next.js, it follows a structured commit convention for professional development.",
-    "last_updated": "2025-03-19T07:38:07Z"
+    "last_updated": "2025-03-19T07:38:07Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "insdragent",
     "goal": "A specialized AI agent implementation using the TypeScript + Express boilerplate. It likely serves as a lightweight backend for 'Insdr' bot interactions.",
-    "last_updated": "2025-02-22T14:09:39Z"
+    "last_updated": "2025-02-22T14:09:39Z",
+    "project_category": "vibecoded crm"
   },
   {
     "name": "jgudeployment",
@@ -542,56 +627,67 @@
   {
     "name": "data",
     "goal": "A private centralized data repository. It likely stores shared assets, raw datasets, or configuration files used across multiple projects in your ecosystem.",
-    "last_updated": "2024-11-17T13:50:19Z"
+    "last_updated": "2024-11-17T13:50:19Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "project",
     "goal": "A public generic project template or starter kit, serving as an open reference for your standard development stack and folder structure.",
-    "last_updated": "2024-09-23T17:03:24Z"
+    "last_updated": "2024-09-23T17:03:24Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "glanceusa",
     "goal": "A US-market adaptation of the Glance platform. It uses Next.js with Auth.js (NextAuth) for secure access and is optimized with Prettier and structure-aware components for a polished user experience.",
-    "last_updated": "2024-09-17T20:51:51Z"
+    "last_updated": "2024-09-17T20:51:51Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "glance",
     "goal": "The core public-facing Glance application. Built with Next.js and Prisma, it features a Google Cloud integration (secret-willow) and uses a modern Tailwind CSS design for a real estate or data analytics platform.",
-    "last_updated": "2024-09-11T16:19:45Z"
+    "last_updated": "2024-09-11T16:19:45Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "glancemain",
     "goal": "A legacy or placeholder repository for the main Glance development branch, currently maintained as a mirror or empty initialization point.",
-    "last_updated": "2024-07-29T09:51:22Z"
+    "last_updated": "2024-07-29T09:51:22Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "nextjs-chat",
     "goal": "A comprehensive chat application template. It features a full authentication system (Auth.js), real-time messaging capabilities, and is built using the latest Next.js patterns and Tailwind CSS.",
-    "last_updated": "2024-07-25T23:20:08Z"
+    "last_updated": "2024-07-25T23:20:08Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "streamlit-Free",
     "goal": "A Streamlit-based data application specifically integrated with the Tradier API for financial market data visualization and stock analysis.",
-    "last_updated": "2023-11-01T03:14:33Z"
+    "last_updated": "2023-11-01T03:14:33Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "DataViz2",
     "goal": "A specialized data visualization app. It uses Streamlit and is configured for deployment on Railway, focusing on interactive charts and data exploration.",
-    "last_updated": "2023-08-03T17:19:09Z"
+    "last_updated": "2023-08-03T17:19:09Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "streamlit-hello",
     "goal": "An introductory Streamlit project. It serves as a benchmark for Python-based web app performance and features various utility modules for data handling.",
-    "last_updated": "2023-08-03T15:33:09Z"
+    "last_updated": "2023-08-03T15:33:09Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "streamlit-hello-1_nL",
     "goal": "A variation of the streamlit-hello project, likely used for testing different deployment environments or localized configurations.",
-    "last_updated": "2023-08-03T15:07:55Z"
+    "last_updated": "2023-08-03T15:07:55Z",
+    "project_category": "vibecoded fintech"
   },
   {
     "name": "streamlit-yfinance",
     "goal": "A financial analysis tool using Streamlit and the yfinance library. It includes a Jupyter Notebook for research and a dashboard for real-time stock data tracking.",
-    "last_updated": "2023-08-03T14:53:06Z"
+    "last_updated": "2023-08-03T14:53:06Z",
+    "project_category": "vibecoded fintech"
   }
 ]

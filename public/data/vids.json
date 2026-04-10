@@ -2,18 +2,21 @@
   "videos": [
     {
       "title": "Insdr EdTech",
+      "description": "Knowledgebase built for scalable industry search across large corpora of data",
       "shareableLink": "https://youtu.be/5WLakloAQiI",
       "visibility": "Public",
       "category": "vibecoded search algo"
     },
     {
       "title": "Gotham Demo",
+      "description": "Blockchain-based AI audit for project completion and escrow payments for freelance software developers",
       "shareableLink": "https://youtu.be/8uiMYOoMXCU",
       "visibility": "Public",
       "category": "vibecoded web3 software"
     },
     {
       "title": "Roger PNC",
+      "description": "Data analysis platform leveraging public USA homeowner data",
       "shareableLink": "https://youtu.be/sTFxYTIJk-c",
       "visibility": "Unlisted",
       "category": "vibecoded real estate for usa software"
@@ -26,15 +29,16 @@
     },
     {
       "title": "Automation Demo",
+      "description": "Homegrown CRM project with native email verification and identification API hosted on Linux server",
       "shareableLink": "https://youtu.be/hoPntyFMoBY",
       "visibility": "Public",
-      "category": "phone number identification features"
+      "category": "vibecoded crm"
     },
     {
       "title": "Auto Mode Feature Demo",
       "shareableLink": "https://youtu.be/UhfYtr1CZBE",
       "visibility": "Public",
-      "category": "phone number identification features"
+      "category": "vibecoded crm"
     },
     {
       "title": "Emails",
