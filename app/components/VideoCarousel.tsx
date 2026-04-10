@@ -96,17 +96,19 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
             const tooltip = e.currentTarget.querySelector("[data-repo-tooltip]") as HTMLElement | null;
             if (tooltip) {
               tooltip.style.left = `${rect.left + rect.width / 2}px`;
-              tooltip.style.top = `${rect.top - 8}px`;
+              tooltip.style.top = `${rect.bottom + 8}px`;
               tooltip.style.opacity = "1";
               tooltip.style.pointerEvents = "auto";
             }
           }}
-          onMouseLeave={(e) => {
-            const tooltip = e.currentTarget.querySelector("[data-repo-tooltip]") as HTMLElement | null;
-            if (tooltip) {
+          onMouseLeave={() => {
+            const tooltip = document.querySelector("[data-repo-tooltip]") as HTMLElement | null;
+            if (!tooltip) return;
+            setTimeout(() => {
+              if (tooltip.matches(":hover")) return;
               tooltip.style.opacity = "0";
               tooltip.style.pointerEvents = "none";
-            }
+            }, 150);
           }}
         >
           <Thumbnail video={video} />
@@ -146,32 +148,36 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
                   {video.repoCount}
                 </div>
                 <div className="text-white font-mono" style={{ fontSize: "clamp(1rem, 3.5vw, 44px)" }}>codebases</div>
-                {/* Tooltip */}
-                <div
-                  data-repo-tooltip
-                  className="fixed z-50 w-72 max-h-80 overflow-y-auto rounded-lg border border-zinc-700 bg-zinc-900/95 backdrop-blur-sm shadow-2xl p-3 transition-opacity duration-150 opacity-0 pointer-events-none"
-                  style={{ transform: "translate(-50%, -100%)" }}
-                >
-                  <p className="text-xs font-mono mb-2 tracking-wider" style={{ color: video.projectColor }}>
-                    {video.repoCount} codebase{video.repoCount !== 1 ? "s" : ""}
-                  </p>
-                  <div className="space-y-2">
-                    {video.repoNames.map((repo) => (
-                      <div key={repo.name} className="border-b border-zinc-800 last:border-0 pb-2 last:pb-0">
-                        <p className="text-sm font-semibold text-white truncate">{repo.name}</p>
-                        <p className="text-xs text-zinc-400 mt-0.5 line-clamp-2">{repo.goal}</p>
-                        <p className="text-[10px] text-zinc-600 mt-1">
-                          {new Date(repo.last_updated).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
+            </div>
+          </div>
+          {/* Tooltip */}
+          <div
+            data-repo-tooltip
+            className="fixed z-50 w-72 max-h-80 overflow-y-auto rounded-lg border border-zinc-700 bg-zinc-900/95 backdrop-blur-sm shadow-2xl p-3 transition-opacity duration-150 opacity-0 pointer-events-none"
+            style={{ transform: "translate(-50%, 0)" }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.opacity = "0";
+              (e.currentTarget as HTMLElement).style.pointerEvents = "none";
+            }}
+          >
+            <p className="text-xs font-mono mb-2 tracking-wider" style={{ color: video.projectColor }}>
+              {video.repoCount} codebase{video.repoCount !== 1 ? "s" : ""}
+            </p>
+            <div className="space-y-2">
+              {video.repoNames.map((repo) => (
+                <div key={repo.name} className="border-b border-zinc-800 last:border-0 pb-2 last:pb-0">
+                  <p className="text-sm font-semibold text-white truncate">{repo.name}</p>
+                  <p className="text-xs text-zinc-400 mt-0.5 line-clamp-2">{repo.goal}</p>
+                  <p className="text-[10px] text-zinc-600 mt-1">
+                    {new Date(repo.last_updated).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
