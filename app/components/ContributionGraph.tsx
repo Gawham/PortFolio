@@ -118,8 +118,8 @@ export default function ContributionGraph({
       </div>
 
       {/* Graph */}
-      <div>
-        <div style={{ display: "inline-flex", gap: 8, alignItems: "flex-start" }}>
+      <div className="overflow-x-auto -mx-6 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div style={{ display: "inline-flex", gap: 8, alignItems: "flex-start", minWidth: "max-content" }}>
           {/* Day labels column */}
           <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingTop: 22 }}>
             {DAY_LABELS.map((label, i) => (
