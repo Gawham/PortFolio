@@ -78,7 +78,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
   return (
     <div className="relative w-full">
       {/* Three-panel layout */}
-      <div className="flex items-center gap-3">
+      <div className="relative flex min-w-0 items-center gap-0 sm:gap-3">
         {/* Prev panel */}
         <div className="hidden sm:block flex-shrink-0 w-[30%] aspect-video rounded-xl overflow-hidden">
           <Thumbnail video={videos[prevIdx]} onClick={prev} dimmed />
@@ -87,7 +87,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
         {/* Left arrow — sits between prev panel and main */}
         <button
           onClick={prev}
-          className="flex-shrink-0 w-10 h-10 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:bg-black/90 transition-colors backdrop-blur-sm z-10"
+          className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:static sm:h-10 sm:w-10 sm:translate-y-0 sm:flex-shrink-0"
           aria-label="Previous"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -207,7 +207,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
         {/* Right arrow */}
         <button
           onClick={next}
-          className="flex-shrink-0 w-10 h-10 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:bg-black/90 transition-colors backdrop-blur-sm z-10"
+          className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:static sm:h-10 sm:w-10 sm:translate-y-0 sm:flex-shrink-0"
           aria-label="Next"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>

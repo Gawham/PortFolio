@@ -118,18 +118,18 @@ export default function ContributionGraph({
       </div>
 
       {/* Graph */}
-      <div className="overflow-x-auto -mx-6 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div style={{ display: "inline-flex", gap: 8, alignItems: "flex-start", minWidth: "max-content" }}>
+      <div className="max-w-full overflow-hidden pb-2 [--day-label-width:0px] [--graph-gap:2px] [--graph-square:clamp(4px,1.45vw,11px)] sm:[--day-label-width:28px] sm:[--graph-gap:4px]">
+        <div className="flex w-full items-start gap-1 sm:gap-2">
           {/* Day labels column */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingTop: 22 }}>
+          <div className="hidden flex-col sm:flex" style={{ gap: "var(--graph-gap)", paddingTop: 22 }}>
             {DAY_LABELS.map((label, i) => (
               <div
                 key={i}
                 style={{
-                  height: 11,
-                  width: 28,
+                  height: "var(--graph-square)",
+                  width: "var(--day-label-width)",
                   fontSize: 10,
-                  lineHeight: "11px",
+                  lineHeight: "var(--graph-square)",
                   color: "#8b949e",
                   textAlign: "right",
                   paddingRight: 4,
@@ -142,16 +142,16 @@ export default function ContributionGraph({
           </div>
 
           {/* Month labels + grid */}
-          <div>
+          <div className="min-w-0 flex-1">
             {/* Month labels */}
-            <div style={{ display: "flex", gap: 4, marginBottom: 6, height: 18 }}>
+            <div style={{ display: "flex", gap: "var(--graph-gap)", marginBottom: 6, height: 18 }}>
               {weeks.map((_, i) => {
                 const ml = monthLabels.find((m) => m.col === i);
                 return (
                   <div
                     key={i}
                     style={{
-                      width: 11,
+                      width: "var(--graph-square)",
                       fontSize: 10,
                       color: "#8b949e",
                       overflow: "visible",
@@ -165,9 +165,9 @@ export default function ContributionGraph({
             </div>
 
             {/* Squares grid */}
-            <div style={{ display: "flex", gap: 4 }}>:
+            <div style={{ display: "flex", gap: "var(--graph-gap)" }}>
               {weeks.map((week, wi) => (
-                <div key={wi} style={{ display: "flex", flexDirection: "column", gap: 4 }}>:
+                <div key={wi} style={{ display: "flex", flexDirection: "column", gap: "var(--graph-gap)" }}>
                   {week.contributionDays.map((day, di) => (
                     <div
                       key={di}
@@ -177,8 +177,8 @@ export default function ContributionGraph({
                           : undefined
                       }
                       style={{
-                        width: 11,
-                        height: 11,
+                        width: "var(--graph-square)",
+                        height: "var(--graph-square)",
                         borderRadius: 2,
                         backgroundColor: day.color,
                       }}

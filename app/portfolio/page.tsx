@@ -176,28 +176,28 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-black text-zinc-200">
+    <div className="min-h-screen overflow-x-hidden bg-black text-zinc-200">
       {/* Nav */}
       <nav className="sticky top-0 z-10 border-b border-zinc-800 bg-black/90 backdrop-blur-sm">
-        <div className="mx-auto max-w-5xl px-6 h-14 flex items-center justify-between">
-          <span className="font-mono text-sm text-zinc-400">guhansrinivasan</span>
-          <div className="flex gap-5 text-sm text-zinc-500">
+        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+          <span className="font-mono text-xs text-zinc-400 sm:text-sm">guhansrinivasan</span>
+          <div className="flex gap-3 text-xs text-zinc-500 sm:gap-5 sm:text-sm">
             <a href="#activity" className="hover:text-white transition-colors">Activity</a>
             <a href="#timeline" className="hover:text-white transition-colors">Ventures</a>
           </div>
         </div>
       </nav>
 
-      <main className="mx-auto max-w-5xl px-6 pb-24">
+      <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
         {/* Hero — profile + commit graph */}
-        <section id="activity" className="pt-10 pb-8 border-b border-zinc-800 -mr-6 sm:-mr-16 md:-mr-28" style={{ overflow: 'visible' }}>
+        <section id="activity" className="border-b border-zinc-800 pt-8 pb-8 sm:pt-10">
           {/* Name + DP */}
-          <div className="mb-10 flex items-start gap-5">
-            <img src="/1727086616679.jpg" alt="Guhan Srinivasan" className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-zinc-700" />
-            <div>
+          <div className="mb-10 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
+            <img src="/1727086616679.jpg" alt="Guhan Srinivasan" className="h-20 w-20 flex-shrink-0 rounded-full border-2 border-zinc-700 object-cover sm:h-20 sm:w-20" />
+            <div className="min-w-0">
               <p className="text-xs font-mono text-[#3fb950] mb-1 tracking-wider">$ whoami</p>
-              <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">Guhan Srinivasan</h1>
-              <p className="text-sm text-zinc-400 mt-3 max-w-xl leading-relaxed">
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Guhan Srinivasan</h1>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-zinc-400 sm:mx-0">
                 Founder who ships. Registered my company in 2024 and been full-time since. Best part — I&apos;m a business grad, never professionally studied engineering.
 
               </p>
@@ -214,15 +214,13 @@ export default function Home() {
             <ContributionGraph commitsByDate={commitsByDate} />
           </div>
           {/* Stats */}
-          <div className="flex justify-center gap-4 sm:gap-8 font-mono text-sm mb-10">
+          <div className="mb-10 flex flex-wrap justify-center gap-4 font-mono text-sm sm:gap-8">
             <div><span className="text-lg sm:text-2xl font-bold text-white">{totalRepos}</span><span className="text-zinc-500 ml-1.5">codebases</span></div>
             <div><span className="text-lg sm:text-2xl font-bold text-white">{projects.length}</span><span className="text-zinc-500 ml-1.5">ventures</span></div>
             <div><span className="text-lg sm:text-2xl font-bold text-white">{totalVideos}</span><span className="text-zinc-500 ml-1.5">demos</span></div>
           </div>
           {/* Video carousel */}
-          <div className="-mx-6 sm:-mx-16 md:-mx-32 lg:-mx-48 xl:-mx-64">
-            <VideoCarousel videos={carouselVideos} />
-          </div>
+          <VideoCarousel videos={carouselVideos} />
         </section>
 
         {/* Project Timeline */}
