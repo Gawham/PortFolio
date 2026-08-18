@@ -188,7 +188,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
+      <main className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
         {/* Hero — profile + commit graph */}
         <section id="activity" className="border-b border-zinc-800 pt-8 pb-8 sm:pt-10">
           {/* Name + DP */}

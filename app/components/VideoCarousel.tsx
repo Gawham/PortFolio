@@ -76,18 +76,18 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
   const nextIdx = (current + 1) % videos.length;
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full sm:-mx-6 lg:-mx-16">
       {/* Three-panel layout */}
-      <div className="relative flex min-w-0 items-center gap-0 sm:gap-3">
+      <div className="relative flex min-w-0 items-center gap-0 sm:gap-4">
         {/* Prev panel */}
-        <div className="hidden sm:block flex-shrink-0 w-[30%] aspect-video rounded-xl overflow-hidden">
+        <div className="hidden sm:block flex-shrink-0 w-[14%] aspect-video rounded-xl overflow-hidden">
           <Thumbnail video={videos[prevIdx]} onClick={prev} dimmed />
         </div>
 
         {/* Left arrow — sits between prev panel and main */}
         <button
           onClick={prev}
-          className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:static sm:h-10 sm:w-10 sm:translate-y-0 sm:flex-shrink-0"
+          className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:left-[15%] sm:h-10 sm:w-10"
           aria-label="Previous"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -97,7 +97,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
 
         {/* Main video */}
         <div
-          className="relative flex-1 aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800"
+          className="relative flex-1 aspect-video rounded-xl border border-zinc-800 bg-zinc-900"
           onMouseEnter={(e) => {
             const rect = e.currentTarget.getBoundingClientRect();
             const tooltip = e.currentTarget.querySelector("[data-repo-tooltip]") as HTMLElement | null;
@@ -121,7 +121,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
           <Thumbnail video={video} />
 
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
 
           {/* Play button */}
           {video.mediaType !== "image" && (
@@ -140,38 +140,33 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
             </a>
           )}
 
-          {/* Bottom overlay: title + meta */}
-          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 pointer-events-none">
-            <div className="flex items-end justify-between gap-2 sm:gap-4">
-              <div className="min-w-0">
-                <h2 className="text-base sm:text-xl font-semibold text-white leading-tight">{video.mediaType === "image" || video.posterSrc ? video.title : CATEGORY_LABELS[video.category] ?? video.category}</h2>
-                <p className="text-xs sm:text-sm text-zinc-400 mt-1 line-clamp-2">{video.description ?? video.title}</p>
-              </div>
-
-              {/* Repo count badge / event poster */}
-              <div className="flex-shrink-0 text-right">
-                {video.posterSrc ? (
-                  <div className="w-20 sm:w-32 md:w-40 rounded-lg overflow-hidden border border-white/20 bg-black/40 shadow-2xl">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={video.posterSrc}
-                      alt={`${video.title} event poster`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ) : (
-                  <>
-                    <div
-                      className="font-bold tabular-nums"
-                      style={{ color: video.projectColor, fontSize: "clamp(3rem, 12vw, 12rem)", lineHeight: 1 }}
-                    >
-                      {video.repoCount}
-                    </div>
-                    <div className="text-white font-mono" style={{ fontSize: "clamp(1rem, 3.5vw, 44px)" }}>codebases</div>
-                  </>
-                )}
-              </div>
+          {/* Bottom overlay: title */}
+          <div className="absolute bottom-0 left-0 right-0 p-3 pr-24 pointer-events-none sm:p-5 sm:pr-32">
+            <div className="min-w-0">
+              <h2 className="text-base sm:text-xl font-semibold text-white leading-tight">{video.mediaType === "image" || video.posterSrc ? video.title : CATEGORY_LABELS[video.category] ?? video.category}</h2>
+              <p className="text-xs sm:text-sm text-zinc-400 mt-1 line-clamp-2">{video.description ?? video.title}</p>
             </div>
+          </div>
+
+          {/* Small repo count badge / event poster — kept in the corner so it does not cover the hero image */}
+          <div className="absolute -bottom-3 -right-3 z-10 text-right pointer-events-none sm:-bottom-5 sm:-right-5">
+            {video.posterSrc ? (
+              <div className="w-20 overflow-hidden rounded-lg border border-white/20 bg-black/50 shadow-2xl sm:w-28 md:w-32">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={video.posterSrc}
+                  alt={`${video.title} event poster`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className="rounded-xl border border-white/15 bg-black/65 px-2.5 py-2 shadow-2xl backdrop-blur-sm sm:px-3 sm:py-2.5">
+                <div className="text-2xl font-bold leading-none tabular-nums sm:text-4xl" style={{ color: video.projectColor }}>
+                  {video.repoCount}
+                </div>
+                <div className="mt-0.5 text-[10px] font-mono uppercase tracking-wide text-white sm:text-xs">codebases</div>
+              </div>
+            )}
           </div>
           {/* Tooltip */}
           <div
@@ -207,7 +202,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
         {/* Right arrow */}
         <button
           onClick={next}
-          className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:static sm:h-10 sm:w-10 sm:translate-y-0 sm:flex-shrink-0"
+          className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/90 sm:right-[15%] sm:h-10 sm:w-10"
           aria-label="Next"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -216,7 +211,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
         </button>
 
         {/* Next panel */}
-        <div className="hidden sm:block flex-shrink-0 w-[18%] aspect-video rounded-xl overflow-hidden">
+        <div className="hidden sm:block flex-shrink-0 w-[14%] aspect-video rounded-xl overflow-hidden">
           <Thumbnail video={videos[nextIdx]} onClick={next} dimmed />
         </div>
       </div>
