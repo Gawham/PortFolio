@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guhan Srinivasan - IIM CV</title>
+<style>
+@font-face{font-family:'PDF-Garamond';src:url('assets/india_abs_Garamond.ttf') format('truetype');font-weight:400;font-style:normal;}
+@font-face{font-family:'PDF-Garamond-Bold';src:url('assets/india_abs_Garamond_Bold.ttf') format('truetype');font-weight:700;font-style:normal;}
+@font-face{font-family:'PDF-Constantia';src:url('assets/india_abs_Constantia.ttf') format('truetype');font-weight:400;font-style:normal;}
+@font-face{font-family:'PDF-Constantia-Bold';src:url('assets/india_abs_Constantia-Bold.ttf') format('truetype');font-weight:700;font-style:normal;}
+:root{--panel:#111827;--muted:#6b7280;--line:#111;--bar:#a7a7a7;--blue:#00f;--paper:#fff;--bg:#e7e7e7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#111;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+.app{display:grid;grid-template-columns:minmax(360px,430px) 1fr;height:100vh;overflow:hidden;}
+.editor{background:#0f172a;color:#e5e7eb;padding:16px;display:flex;flex-direction:column;gap:12px;border-right:1px solid #111827;}
+.editor h1{font-size:18px;line-height:1.2;margin:0}.editor p{margin:0;color:#cbd5e1;font-size:12px;line-height:1.45}.toolbar{display:flex;flex-wrap:wrap;gap:8px}.toolbar button,.topbar button{border:0;border-radius:8px;padding:8px 10px;font-weight:700;cursor:pointer;background:#e5e7eb;color:#111827}.toolbar button.primary,.topbar button.primary{background:#60a5fa;color:#06162f}.toolbar button.danger{background:#fecaca;color:#7f1d1d}.toolbar button:hover,.topbar button:hover{filter:brightness(.95)}
+#jsonInput{width:100%;flex:1;resize:none;border:1px solid #334155;border-radius:10px;background:#020617;color:#e2e8f0;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;padding:12px;outline:none;tab-size:2;}#jsonInput:focus{border-color:#60a5fa;box-shadow:0 0 0 2px rgba(96,165,250,.2)}
+.status{min-height:20px;font-size:12px}.status.ok{color:#86efac}.status.err{color:#fca5a5}.workspace{height:100vh;display:flex;flex-direction:column;overflow:hidden}.topbar{background:#fff;padding:10px 14px;border-bottom:1px solid #d1d5db;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.topbar .spacer{flex:1}.topbar .mode{background:#f3f4f6}.topbar .mode.active{background:#111827;color:#fff}.preview{overflow:auto;padding:22px;}
+.page{position:relative;width:595.32pt;min-height:841.92pt;margin:0 auto 24px;background:var(--paper);box-shadow:0 1px 9px rgba(0,0,0,.28);font-family:'PDF-Garamond',Garamond,"Times New Roman",serif;font-size:10.95pt;line-height:1.04;color:#111;padding:20pt 27pt 34pt 27pt;}
+.page-header{height:51pt;position:relative}.name{position:absolute;right:0;top:0;font-family:'PDF-Constantia-Bold',Constantia,serif;font-size:18pt;font-weight:700;letter-spacing:.2pt;text-transform:uppercase}.subtitle{position:absolute;right:0;top:24pt;font-family:'PDF-Constantia',Constantia,serif;font-size:12pt}.section-title{background:var(--bar);font-family:'PDF-Garamond-Bold',Garamond,serif;font-size:13.6pt;font-weight:700;letter-spacing:.2pt;line-height:14.8pt;padding:0 7pt;margin:4pt 0 3pt;text-transform:uppercase}.edu-table{width:100%;border-collapse:collapse;font-size:9.7pt;line-height:1.02;margin-bottom:3pt}.edu-table th,.edu-table td{border:.55pt solid #111;padding:2.2pt 5pt;vertical-align:middle}.edu-table th{background:var(--bar);font-family:'PDF-Garamond-Bold';font-size:10.9pt;text-align:center}.edu-table td:nth-child(1){font-family:'PDF-Garamond-Bold';font-size:11.3pt}.edu-table td:nth-child(3),.edu-table td:nth-child(4){text-align:center;white-space:nowrap}.edu-table td:nth-child(5){text-align:center;font-family:'PDF-Garamond-Bold';font-size:10.7pt}.entry{margin:5.2pt 0 0}.entry-head{display:flex;justify-content:space-between;gap:14pt;align-items:flex-start;font-family:'PDF-Garamond-Bold';font-weight:700;font-size:11.7pt;line-height:1.01}.entry-org{text-decoration:underline;text-underline-offset:2px}.entry-date{white-space:nowrap;text-align:right}.entry-role{font-family:'PDF-Garamond-Bold';font-weight:700;font-size:11.3pt;margin-top:1.8pt}.bullets{margin:3.2pt 0 0 10pt;padding:0;list-style-type:square}.bullets li{margin:1.9pt 0;padding-left:2pt}.bullets strong{font-family:'PDF-Garamond-Bold';font-weight:700}.bullets a{color:var(--blue);font-family:'PDF-Garamond-Bold';font-weight:700;text-decoration:underline}.simple-list{margin:3pt 0 0 10pt;padding:0;list-style-type:square}.simple-list li{margin:2pt 0}.footer{position:absolute;left:27pt;right:27pt;bottom:8pt;text-align:center;font-size:10.1pt;line-height:1.25}.footer a{color:var(--blue);text-decoration:underline}.ach-row{display:grid;grid-template-columns:1fr 44pt;gap:10pt;margin:2pt 0}.ach-row .year{text-align:right;white-space:nowrap}.other-list{margin-top:4pt}.ats-view{max-width:900px;margin:0 auto;background:#fff;box-shadow:0 1px 9px rgba(0,0,0,.18);padding:28px}.ats-view h2{margin:0 0 10px}.ats-view pre{white-space:pre-wrap;font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#111;background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:18px}.hidden{display:none!important}
+body.viewer .app{display:block;height:auto;overflow:visible;}body.viewer .editor,body.viewer .topbar{display:none!important;}body.viewer .workspace{height:auto;overflow:visible;}body.viewer .preview{padding:22px 0;}
+@page{size:A4;margin:0}
+@media print{html,body{width:595.32pt;background:#fff}.app{display:block;height:auto}.editor,.topbar{display:none}.preview{padding:0;overflow:visible}.page{width:595.32pt!important;height:841.92pt!important;min-height:841.92pt!important;margin:0;box-shadow:none;overflow:hidden;page-break-after:always;break-after:page;-webkit-print-color-adjust:exact;print-color-adjust:exact}.page:last-child{page-break-after:auto;break-after:auto}.section-title,.edu-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.ats-view{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="editor">
+    <h1>IIM CV content editor</h1>
+    <p>Edit the JSON below. Changes update the resume live. Use <code>**bold**</code> and <code>[text](url)</code> inside text fields.</p>
+    <div class="toolbar">
+      <button class="primary" id="applyBtn">Apply</button>
+      <button id="prettyBtn">Prettify JSON</button>
+      <button class="danger" id="resetBtn">Reset</button>
+    </div>
+    <textarea id="jsonInput" spellcheck="false"></textarea>
+    <div id="status" class="status ok">Ready.</div>
+  </aside>
+  <main class="workspace">
+    <div class="topbar">
+      <button class="mode active" id="visualBtn">What we see</button>
+      <button class="mode" id="atsBtn">What ATS sees</button>
+      <span class="spacer"></span>
+      <button class="primary" id="exportPdfBtn">Export formatted ATS PDF</button>
+    </div>
+    <div class="preview">
+      <div id="visualMount"></div>
+      <div id="atsMount" class="ats-view hidden"></div>
+    </div>
+  </main>
+</div>
+<script type="application/json" id="defaultData">
+{
+  "profile": {
+    "name": "GUHAN SRINIVASAN",
+    "subtitle": "Male, 24",
+    "address": "Yelahanka, Bengaluru, India",
+    "phone": "WhatsApp only: +91 9113261672 / +91 9900828941 (overseas at the moment)",
+    "email": "guhansrinivasan@glanceai.in"
+  },
+  "sectionTitles": {
+    "education": "EDUCATION",
+    "work": "WORK EXPERIENCE",
+    "fellowships": "STARTUP PROGRAMS AND GRANTS",
+    "publications": "VENTURE AND TECH RECOGNITION",
+    "achievements": "HACKATHONS AND SHORTLISTS",
+    "conferences": "CERTIFICATIONS",
+    "other": "OTHER DETAILS"
+  },
+  "education": [
+    {
+      "institution": "O.P. Jindal Global University, New Delhi",
+      "degree": "BBA (Hons.) - Financial Markets",
+      "gpa": "7.15/8 (89%)",
+      "year": "2024",
+      "hallmarks": "Rank holding graduate; First Class Hons.; Dean's List"
+    },
+    {
+      "institution": "Oakridge International School, Bengaluru",
+      "degree": "International Baccalaureate Diploma Programme",
+      "gpa": "31/45",
+      "year": "2021",
+      "hallmarks": "HL Computer Science, Mathematics AI, Economics"
+    }
+  ],
+  "workExperience": [
+    {
+      "organization": "GBSSBN NAKSHATRA INSDR SOFTWARE SOLUTIONS PVT LTD, Bengaluru",
+      "dates": "June 2023-Present",
+      "title": "Founder Director (DIN: 10975005; CIN: U62011KA2025PTC198804)",
+      "bullets": [
+        "Registered **GBSSBN NAKSHATRA INSDR SOFTWARE SOLUTIONS PVT LTD** as a software products company; Director DIN **10975005**; CIN **U62011KA2025PTC198804**.",
+        "Building products focused on **LLM-native advertising, search and RAG infrastructure** for education, sales and enterprise knowledge workflows.",
+        "Grew an early community of **50-100 builders/users** around LLM ad experiments and AI builds, including paid AI-build work and feedback loops for product development.",
+        "Developed **video RAG and photo RAG pipelines** for retrieval across multimedia content, enabling users to search inside videos/images rather than only text files."
+      ]
+    },
+    {
+      "organization": "GBSSBN NAKSHATRA INSDR SOFTWARE SOLUTIONS PVT LTD - Solutions Consulting",
+      "dates": "2024-Present",
+      "title": "AI Automation and RAG Consultant",
+      "bullets": [
+        "Built outbound data and outreach pipelines for real-estate companies in **Denver and Ohio** to identify off-market customers and improve acquisition workflows.",
+        "Generated approximately **₹3 lakh in commissions** and **US$40,000-50,000 in sales pipeline/value** through CRM, data-cleaning, lead-identification and automated outreach systems.",
+        "Implemented **RAG pipelines for businesses in Cairo, Australia and London**, adapting retrieval, indexing and answer-generation workflows to client-specific data and operating needs.",
+        "Designed practical LLM workflows across document search, sales intelligence, email automation, multimedia retrieval and internal knowledge-base use cases."
+      ]
+    },
+    {
+      "organization": "GBSSBN NAKSHATRA INSDR SOFTWARE SOLUTIONS PVT LTD - Quantitative/Fintech Builds",
+      "dates": "June 2023-2024",
+      "title": "Founder and Full-Stack AI Builder",
+      "bullets": [
+        "Built early AI backtesting, stock-screening and financial-analysis prototypes using **Python, JavaScript, AI APIs and RAG** over financial reports and market data.",
+        "Accepted into **Y Combinator's Buildspace initiative** from 34,000 applicants; placed in the top 20% of the cohort and was invited to the Buildspace IRL conference in San Francisco.",
+        "Combined business/financial training with self-built engineering execution across full-stack apps, data pipelines, embeddings, vector search and LLM evaluation workflows."
+      ]
+    }
+  ],
+  "fellowships": [
+    {
+      "name": "Startup Cloud and AI Credits/Grants",
+      "dates": "2024; 2026",
+      "pageBreakBefore": false,
+      "bullets": [
+        "Secured startup program credits/grants from **AWS Startup Program, Microsoft Azure Startup Program and Gemini/Google startup ecosystem in 2024**; later granted support from the **Cloudflare Startup Program in 2026**.",
+        "Used cloud/startup support to deploy AI search, RAG, CRM automation and LLM application infrastructure across multiple product experiments."
+      ]
+    },
+    {
+      "name": "CFA Institute",
+      "dates": "May 2027",
+      "pageBreakBefore": false,
+      "bullets": [
+        "CFA Level I candidate; writing the **CFA Level I exam in May 2027 under a CFA scholarship**.",
+        "Using the programme to deepen credibility across ethics, quantitative methods, economics, financial statement analysis, corporate issuers and portfolio management."
+      ]
+    }
+  ],
+  "publications": [
+    "Built and demonstrated a technical portfolio spanning RAG/search products, CRM/outreach automation, fintech analysis tools, Web3 escrow/audit systems and multimedia AI retrieval.",
+    "Prior research/writing focus on ML and LLM applications in fundamental, technical and sentiment analysis for financial markets."
+  ],
+  "achievements": [
+    {
+      "text": "Won/placed in multiple hackathons: **2nd Place at Altimate Code Hackathon** using RAG with SQL",
+      "year": "2024"
+    },
+    {
+      "text": "Selected **Top 10 at Qπ AI Ground Run 1.0** for a specialty RAG pipeline pitch/demo",
+      "year": "2026"
+    },
+    {
+      "text": "Shortlisted **Top 10 at T-Works Hyderabad Hackathon** for an AI/video-search style build",
+      "year": "2026"
+    },
+    {
+      "text": "Shortlisted for the **ISB IVI interview** after clearing the initial Bangalore round and being selected for Hyderabad in-person interview",
+      "year": "2025"
+    },
+    {
+      "text": "Built/submitted demos for the **Gemini API Developer Competition** and related AI startup/product programmes",
+      "year": "2024"
+    }
+  ],
+  "conferences": [
+    "IBM Certified; NISM Mutual Fund Distribution certified; Finlatics Investment Banking training; UPenn quantitative modelling coursework/certification.",
+    "Technical stack: JavaScript/TypeScript, React/Next.js, Python, Node.js, PostgreSQL, MySQL, vector search, RAG, embeddings, AI APIs, Linux/Nginx deployment.",
+    "Relevant modules: Calculus, Microeconomics, Macroeconomics, Statistics, Indian Economy, Financial Modelling, Corporate Finance, Data Structures and Algorithms using Python, Predictive Analytics."
+  ],
+  "otherDetails": [
+    "Positioning: business graduate who runs numbers and builds using code; portfolio is intended as proof of technical ability built over the last 2+ years.",
+    "Interests: AI applications in finance, entrepreneurship, negotiations, travel, food and culture, Sufi music.",
+    "Favourite books: A Mind for Numbers, The Richest Man in Babylon, Naval Ravikant Almanack, Rich Dad Poor Dad, Mahabharata, Ramayana."
+  ]
+}
+</script>
+<script>
+const STORAGE_KEY = 'iim-cv-editor-data-v2-guhan-vc';
+const el = id => document.getElementById(id);
+const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function inlineHTML(text){
+  let s = escapeHTML(text);
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return s;
+}
+function plain(text){return String(text ?? '').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'$1').replace(/\*\*/g,'');}
+function cleanFileName(name){return String(name || 'resume').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'resume';}
+const DEFAULT_DATA = JSON.parse(el('defaultData').textContent);
+let currentData = structuredClone(DEFAULT_DATA);
+let currentMode = 'visual';
+function footerHTML(d){return `<div class="footer">${escapeHTML(d.profile.address)} | Phone: ${escapeHTML(d.profile.phone)} |<br>Email: <a>${escapeHTML(d.profile.email)}</a></div>`;}
+function headerHTML(d){return `<div class="page-header"><div class="name">${escapeHTML(d.profile.name)}</div><div class="subtitle">${escapeHTML(d.profile.subtitle)}</div></div>`;}
+function section(title){return `<div class="section-title">${escapeHTML(title)}</div>`;}
+function renderEducation(d){return `${section(d.sectionTitles.education)}<table class="edu-table"><thead><tr><th>College/School</th><th>Degree/ Class</th><th>GPA (%)</th><th>Year</th><th>Hallmarks</th></tr></thead><tbody>${d.education.map(r=>`<tr><td>${inlineHTML(r.institution)}</td><td>${inlineHTML(r.degree)}</td><td>${inlineHTML(r.gpa)}</td><td>${inlineHTML(r.year)}</td><td>${inlineHTML(r.hallmarks)}</td></tr>`).join('')}</tbody></table>`;}
+function renderEntries(entries){return entries.map(e=>`<div class="entry"><div class="entry-head"><span class="entry-org">${inlineHTML(e.organization || e.name)}</span><span class="entry-date">${inlineHTML(e.dates)}</span></div>${e.title?`<div class="entry-role">${inlineHTML(e.title)}</div>`:''}<ul class="bullets">${(e.bullets||[]).map(b=>`<li>${inlineHTML(b)}</li>`).join('')}</ul></div>`).join('');}
+function renderSimpleList(items, cls='simple-list'){return `<ul class="${cls}">${(items||[]).map(x=>`<li>${inlineHTML(x)}</li>`).join('')}</ul>`;}
+function renderAchievements(d){return `${section(d.sectionTitles.achievements)}<div class="simple-list">${(d.achievements||[]).map(a=>`<div class="ach-row"><div>▪ ${inlineHTML(a.text)}</div><div class="year">${inlineHTML(a.year)}</div></div>`).join('')}</div>`;}
+function splitFellowships(fellows){let idx=(fellows||[]).findIndex(f=>f.pageBreakBefore); return idx<0?[fellows||[],[]]:[fellows.slice(0,idx),fellows.slice(idx)];}
+function renderVisual(d){
+  const [f1,f2]=splitFellowships(d.fellowships);
+  el('visualMount').innerHTML = `
+    <section class="page">${headerHTML(d)}${renderEducation(d)}${section(d.sectionTitles.work)}${renderEntries(d.workExperience)}${section(d.sectionTitles.fellowships)}${renderEntries(f1)}${footerHTML(d)}</section>
+    <section class="page">${headerHTML(d)}${renderEntries(f2)}${section(d.sectionTitles.publications)}${renderSimpleList(d.publications)}${renderAchievements(d)}${section(d.sectionTitles.conferences)}${renderSimpleList(d.conferences)}${section(d.sectionTitles.other)}${renderSimpleList(d.otherDetails)}${footerHTML(d)}</section>`;
+}
+function buildATSText(d){
+  const lines=[]; const add=(x='')=>lines.push(x);
+  add(d.profile.name); add(`${d.profile.subtitle} | ${d.profile.address} | Phone: ${d.profile.phone} | Email: ${d.profile.email}`); add('');
+  add(d.sectionTitles.education); (d.education||[]).forEach(r=>{add(`${plain(r.institution)} — ${plain(r.degree)}`); add(`GPA: ${plain(r.gpa)} | Year: ${plain(r.year)} | Hallmarks: ${plain(r.hallmarks)}`);}); add('');
+  add(d.sectionTitles.work); (d.workExperience||[]).forEach(e=>{add(`${plain(e.organization)} | ${plain(e.dates)}`); add(plain(e.title)); (e.bullets||[]).forEach(b=>add(`- ${plain(b)}`)); add('');});
+  add(d.sectionTitles.fellowships); (d.fellowships||[]).forEach(e=>{add(`${plain(e.name)} | ${plain(e.dates)}`); (e.bullets||[]).forEach(b=>add(`- ${plain(b)}`));}); add('');
+  add(d.sectionTitles.publications); (d.publications||[]).forEach(b=>add(`- ${plain(b)}`)); add('');
+  add(d.sectionTitles.achievements); (d.achievements||[]).forEach(a=>add(`- ${plain(a.text)} ${plain(a.year)}`)); add('');
+  add(d.sectionTitles.conferences); (d.conferences||[]).forEach(b=>add(`- ${plain(b)}`)); add('');
+  add(d.sectionTitles.other); (d.otherDetails||[]).forEach(b=>add(`- ${plain(b)}`));
+  return lines.join('\n');
+}
+function normalizePDFText(text){
+  return String(text ?? '')
+    .replace(/[\u2018\u2019]/g,"'").replace(/[\u201C\u201D]/g,'"')
+    .replace(/[\u2013\u2014]/g,'-').replace(/\u2022/g,'-')
+    .replace(/\u00a0/g,' ').normalize('NFKD').replace(/[^\x09\x0A\x0D\x20-\x7E]/g,'');
+}
+function wrapLine(line, max=92){
+  line = normalizePDFText(line);
+  if(!line.trim()) return [''];
+  const out=[]; let rest=line;
+  while(rest.length>max){
+    let cut=rest.lastIndexOf(' ', max);
+    if(cut<35) cut=max;
+    out.push(rest.slice(0,cut));
+    rest=rest.slice(cut).trimStart();
+  }
+  out.push(rest);
+  return out;
+}
+function pdfEscape(s){return normalizePDFText(s).replace(/\\/g,'\\\\').replace(/\(/g,'\\(').replace(/\)/g,'\\)');}
+function buildATSPDF(d){
+  const rawLines = buildATSText(d).split('\n');
+  const lines=[]; rawLines.forEach(line=>wrapLine(line).forEach(x=>lines.push(x)));
+  const pageW=612, pageH=792, margin=54, fontSize=10.5, lineH=14.25, startY=pageH-margin;
+  const maxLines=Math.floor((pageH-margin*2)/lineH);
+  const chunks=[]; for(let i=0;i<lines.length;i+=maxLines) chunks.push(lines.slice(i,i+maxLines));
+  const objects=[null];
+  objects[1]='<< /Type /Catalog /Pages 2 0 R >>';
+  objects[2]='';
+  objects[3]='<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>';
+  const pageIds=[];
+  for(const chunk of chunks){
+    let stream=`BT\n/F1 ${fontSize} Tf\n${lineH} TL\n${margin} ${startY} Td\n`;
+    for(const line of chunk){ stream += line ? `(${pdfEscape(line)}) Tj\nT*\n` : `T*\n`; }
+    stream+='ET\n';
+    const contentId=objects.length;
+    objects.push(`<< /Length ${stream.length} >>\nstream\n${stream}endstream`);
+    const pageId=objects.length;
+    objects.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] /Resources << /Font << /F1 3 0 R >> >> /Contents ${contentId} 0 R >>`);
+    pageIds.push(pageId);
+  }
+  objects[2]=`<< /Type /Pages /Kids [${pageIds.map(id=>id+' 0 R').join(' ')}] /Count ${pageIds.length} >>`;
+  let pdf='%PDF-1.4\n'; const offsets=[0];
+  for(let i=1;i<objects.length;i++){ offsets[i]=pdf.length; pdf+=`${i} 0 obj\n${objects[i]}\nendobj\n`; }
+  const xref=pdf.length;
+  pdf+=`xref\n0 ${objects.length}\n0000000000 65535 f \n`;
+  for(let i=1;i<objects.length;i++) pdf+=`${String(offsets[i]).padStart(10,'0')} 00000 n \n`;
+  pdf+=`trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  return pdf;
+}
+function renderATS(d){el('atsMount').innerHTML = `<h2>What ATS sees</h2><pre>${escapeHTML(buildATSText(d))}</pre>`;}
+function exportFormattedPDF(){
+  setMode('visual');
+  const base = location.href.slice(0, location.href.lastIndexOf('/') + 1);
+  const styles = Array.from(document.querySelectorAll('style')).map(s => s.textContent).join('\n');
+  const html = `<!doctype html><html><head><meta charset="utf-8"><base href="${base}"><title>${escapeHTML(currentData.profile.name)} formatted ATS PDF</title><style>${styles}\nhtml,body{margin:0!important;background:#fff!important;width:595.32pt!important}.print-root{margin:0;padding:0}.page{width:595.32pt!important;height:841.92pt!important;min-height:841.92pt!important;margin:0!important;box-shadow:none!important;overflow:hidden!important;page-break-after:always;break-after:page;-webkit-print-color-adjust:exact;print-color-adjust:exact}.page:last-child{page-break-after:auto;break-after:auto}.section-title,.edu-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}</style></head><body><div class="print-root">${el('visualMount').innerHTML}</div><script>window.onload=async()=>{try{if(document.fonts) await document.fonts.ready;}catch(e){} setTimeout(()=>window.print(),250)};<\/script></body></html>`;
+  const win = window.open('', '_blank');
+  if(!win){
+    el('status').textContent='Popup blocked. Allow popups for this file, then try again.';
+    el('status').className='status err';
+    return;
+  }
+  win.document.open(); win.document.write(html); win.document.close();
+  el('status').textContent='Opened formatted resume export. In the print dialog choose “Save as PDF”.';
+  el('status').className='status ok';
+}
+function renderAll(d){renderVisual(d);renderATS(d);}
+function setMode(mode){currentMode=mode; el('visualMount').classList.toggle('hidden',mode!=='visual'); el('atsMount').classList.toggle('hidden',mode!=='ats'); el('visualBtn').classList.toggle('active',mode==='visual'); el('atsBtn').classList.toggle('active',mode==='ats');}
+function applyFromInput(){
+  try{ const d=JSON.parse(el('jsonInput').value); currentData=d; localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); renderAll(d); el('status').textContent='Saved and rendered.'; el('status').className='status ok'; }
+  catch(err){ el('status').textContent='JSON error: '+err.message; el('status').className='status err'; }
+}
+function download(name, mime, content){const blob=new Blob([content],{type:mime}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function init(){
+  const viewerMode = new URLSearchParams(location.search).has('viewer');
+  if(viewerMode) document.body.classList.add('viewer');
+  let saved=viewerMode ? null : localStorage.getItem(STORAGE_KEY); currentData=saved?JSON.parse(saved):structuredClone(DEFAULT_DATA); el('jsonInput').value=JSON.stringify(currentData,null,2); renderAll(currentData); setMode('visual');
+  let timer; el('jsonInput').addEventListener('input',()=>{clearTimeout(timer); timer=setTimeout(applyFromInput,350);});
+  el('applyBtn').onclick=applyFromInput; el('prettyBtn').onclick=()=>{applyFromInput(); el('jsonInput').value=JSON.stringify(currentData,null,2);};
+  el('resetBtn').onclick=()=>{if(confirm('Reset to original IIM CV content?')){currentData=structuredClone(DEFAULT_DATA); localStorage.removeItem(STORAGE_KEY); el('jsonInput').value=JSON.stringify(currentData,null,2); renderAll(currentData);}};
+  el('visualBtn').onclick=()=>setMode('visual'); el('atsBtn').onclick=()=>setMode('ats');
+  el('exportPdfBtn').onclick=exportFormattedPDF;
+}
+window.exportFormattedPDF = exportFormattedPDF;
+init();
+</script>
+</body>
+</html>

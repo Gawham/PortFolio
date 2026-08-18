@@ -83,7 +83,7 @@ export default function ContributionGraph({
 }: {
   commitsByDate: Record<string, number>;
 }) {
-  const [selectedYear, setSelectedYear] = useState(2025);
+  const [selectedYear, setSelectedYear] = useState(2026);
 
   const weeks = buildWeeks(selectedYear, commitsByDate);
   const total = weeks

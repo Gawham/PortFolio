@@ -8,6 +8,49 @@
       "category": "vibecoded search algo"
     },
     {
+      "title": "Qπ AI Ground Run 1.0 — Top 10",
+      "description": "Pitch video from Qπ AI Ground Run 1.0, where I was selected for the top 10 and presented my specialty RAG pipeline.",
+      "shareableLink": "https://youtu.be/94LI4YHt9-o",
+      "visibility": "Public",
+      "category": "vibecoded search algo",
+      "posterSrc": "/hackathon/agenthive.avif"
+    },
+    {
+      "title": "EdTech Pilot Demo",
+      "description": "Demo of my EdTech pilot: a RAG pipeline that helps students search documents, visually locate where answers appear in their files, and look through YouTube video content.",
+      "shareableLink": "https://youtu.be/xf82hQaeSN8",
+      "visibility": "Public",
+      "category": "vibecoded search algo"
+    },
+    {
+      "title": "Altimate Code Hackathon — 2nd Place",
+      "description": "I used my RAG pipeline in conjunction with SQL and won 2nd place at the Altimate Code Hackathon.",
+      "shareableLink": "/hackathon/2ndplace.jpeg",
+      "visibility": "Public",
+      "category": "vibecoded search algo",
+      "mediaType": "image",
+      "imageSrc": "/hackathon/2ndplace.jpeg",
+      "posterSrc": "/hackathon/altimate.avif"
+    },
+    {
+      "title": "ISB IVI Shortlist",
+      "description": "The same RAG pipeline got shortlisted for the IVI interview. After clearing the initial round in Bangalore, I was selected to fly out to Hyderabad for the in-person interview.",
+      "shareableLink": "/hackathon/isb.png",
+      "visibility": "Public",
+      "category": "vibecoded search algo",
+      "mediaType": "image",
+      "imageSrc": "/hackathon/isb.png"
+    },
+    {
+      "title": "T-Works Hyderabad Hackathon — Top 10",
+      "description": "My first hackathon: shortlisted for a hackathon held at T-Works in Gachibowli, Hyderabad, where I again reached the top 10.",
+      "shareableLink": "/hackathon/cine.jpeg",
+      "visibility": "Public",
+      "category": "vibecoded search algo",
+      "mediaType": "image",
+      "imageSrc": "/hackathon/cine.jpeg"
+    },
+    {
       "title": "Gotham Demo",
       "description": "Blockchain-based AI audit for project completion and escrow payments for freelance software developers",
       "shareableLink": "https://youtu.be/8uiMYOoMXCU",
@@ -77,5 +120,5 @@
       "category": "vibecoded fintech"
     }
   ],
-  "totalVideos": 12
+  "totalVideos": 17
 }

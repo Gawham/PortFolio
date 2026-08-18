@@ -8,6 +8,9 @@ export type CarouselVideo = {
   shareableLink: string;
   visibility: string;
   category: string;
+  mediaType?: "video" | "image";
+  imageSrc?: string;
+  posterSrc?: string;
   projectName: string;
   projectColor: string;
   repoCount: number;
@@ -35,6 +38,7 @@ function Thumbnail({
   onClick?: () => void;
   dimmed?: boolean;
 }) {
+  const isImage = video.mediaType === "image";
   const vid = getYouTubeId(video.shareableLink);
   return (
     <div
@@ -43,12 +47,14 @@ function Thumbnail({
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`https://img.youtube.com/vi/${vid}/maxresdefault.jpg`}
+        src={isImage ? video.imageSrc ?? video.shareableLink : `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`}
         alt={video.title}
         className="w-full h-full object-cover"
         onError={(e) => {
-          (e.target as HTMLImageElement).src =
-            `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+          if (!isImage) {
+            (e.target as HTMLImageElement).src =
+              `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+          }
         }}
       />
       {dimmed && <div className="absolute inset-0 bg-black/60" />}
@@ -57,7 +63,8 @@ function Thumbnail({
 }
 
 export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
-  const [current, setCurrent] = useState(0);
+  const defaultIndex = videos.findIndex((v) => v.title === "Altimate Code Hackathon — 2nd Place");
+  const [current, setCurrent] = useState(defaultIndex >= 0 ? defaultIndex : 0);
 
   const prev = useCallback(() =>
     setCurrent((c) => (c - 1 + videos.length) % videos.length), [videos.length]);
@@ -117,37 +124,52 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
 
           {/* Play button */}
-          <a
-            href={video.shareableLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute inset-0 flex items-center justify-center group"
-            aria-label={`Watch ${video.title}`}
-          >
-            <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 group-hover:scale-110 transition-all duration-200">
-              <svg className="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-          </a>
+          {video.mediaType !== "image" && (
+            <a
+              href={video.shareableLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 flex items-center justify-center group"
+              aria-label={`Watch ${video.title}`}
+            >
+              <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 group-hover:scale-110 transition-all duration-200">
+                <svg className="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </a>
+          )}
 
           {/* Bottom overlay: title + meta */}
           <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 pointer-events-none">
             <div className="flex items-end justify-between gap-2 sm:gap-4">
               <div className="min-w-0">
-                <h2 className="text-base sm:text-xl font-semibold text-white leading-tight">{CATEGORY_LABELS[video.category] ?? video.category}</h2>
+                <h2 className="text-base sm:text-xl font-semibold text-white leading-tight">{video.mediaType === "image" || video.posterSrc ? video.title : CATEGORY_LABELS[video.category] ?? video.category}</h2>
                 <p className="text-xs sm:text-sm text-zinc-400 mt-1 line-clamp-2">{video.description ?? video.title}</p>
               </div>
 
-              {/* Repo count badge */}
+              {/* Repo count badge / event poster */}
               <div className="flex-shrink-0 text-right">
-                <div
-                  className="font-bold tabular-nums"
-                  style={{ color: video.projectColor, fontSize: "clamp(3rem, 12vw, 12rem)", lineHeight: 1 }}
-                >
-                  {video.repoCount}
-                </div>
-                <div className="text-white font-mono" style={{ fontSize: "clamp(1rem, 3.5vw, 44px)" }}>codebases</div>
+                {video.posterSrc ? (
+                  <div className="w-20 sm:w-32 md:w-40 rounded-lg overflow-hidden border border-white/20 bg-black/40 shadow-2xl">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={video.posterSrc}
+                      alt={`${video.title} event poster`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <div
+                      className="font-bold tabular-nums"
+                      style={{ color: video.projectColor, fontSize: "clamp(3rem, 12vw, 12rem)", lineHeight: 1 }}
+                    >
+                      {video.repoCount}
+                    </div>
+                    <div className="text-white font-mono" style={{ fontSize: "clamp(1rem, 3.5vw, 44px)" }}>codebases</div>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -202,7 +224,7 @@ export default function VideoCarousel({ videos }: { videos: CarouselVideo[] }) {
       {/* Title / subtitle strip */}
       <div className="text-center pt-4 pb-2">
         <h2 className="text-xl font-semibold text-white leading-tight">
-          {CATEGORY_LABELS[video.category] ?? video.category}
+          {video.mediaType === "image" || video.posterSrc ? video.title : CATEGORY_LABELS[video.category] ?? video.category}
         </h2>
         <p className="text-sm text-zinc-400 mt-1">{video.description ?? video.title}</p>
       </div>
